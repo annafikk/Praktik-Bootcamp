@@ -1,0 +1,304 @@
+/* Import Font menggunakan API Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Universal Selector (Bersifat GLOBAL) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Root Selector */
+:root {
+    --primer: #ededed;
+    --sekunder: #111111;
+    --tersier: #FFCD29;
+}
+
+/* Body HTML */
+body {
+    background: var(--sekunder);
+    color: var(--primer);
+}
+
+/* Class Header*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Class Logo */
+.logo {
+    font-size: 25px;
+    color: var(--primer);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo-image {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+/* Class Navbar */
+.navbar a {
+    font-size: 18px;
+    color: var(--primer);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--tersier);
+}
+
+/* Class Beranda */
+#beranda {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.beranda-content {
+    max-width: 600px;
+}
+
+.beranda-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.beranda-content p {
+    font-size: 16px;
+    margin: 20px 0px 40px;
+}
+
+.beranda-content .btn-box {
+    width: 150px;
+    height: 50px;
+}
+
+/* Class Box Button */
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid var(--tersier);
+    border-radius: 8px;
+    font-size: 19px;
+    color: var(--tersier);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: var(--sekunder);
+}
+
+.active,
+.btn:hover {
+    color: white;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--tersier);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.sosmed {
+    position: absolute;
+    bottom: 20vh;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sosmed a {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--tersier);
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--tersier);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.sosmed a:hover {
+    color: var(--sekunder);
+}
+
+.sosmed a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--tersier);
+    z-index: -1;
+    transition: .5s;
+}
+
+.sosmed a:hover::before {
+    width: 100%;
+}
+
+.pfp img {
+    position: absolute;
+    top: 31vh;
+    right: 19vh;
+    /* border-radius: 50%; */
+    box-shadow: 0 0 10px var(--tersier);
+    transition: .5s;
+}
+
+.beranda-content span {
+    color: var(--tersier);
+    font-size: 35px;
+    text-shadow: 0 0 10px #00abf0;
+    font-weight: 700;
+}
+
+.pfp img:hover {
+    transform: scale(1.1);
+}
+
+/* Class Tentang */
+#tentang {
+    background-color: #222121;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.tentang-content {
+    max-width: 600px;
+}
+
+.tentang-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.tentang-content p {
+    font-size: 16px;
+    margin: 20px 0px 40px;
+}
+
+.tentang-content .btn-box {
+    width: 150px;
+    height: 50px;
+}
+
+/* Class Layanan */
+#layanan {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.layanan-content {
+    max-width: 600px;
+}
+
+.layanan-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.layanan-content p {
+    font-size: 16px;
+    margin: 20px 0px 40px;
+}
+
+.layanan-content .btn-box {
+    width: 150px;
+    height: 50px;
+}
+
+/* Class Kontak */
+#kontak {
+    background-color: #222121;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.kontak-content {
+    max-width: 600px;
+}
+
+.kontak-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.kontak-content p {
+    font-size: 16px;
+    margin: 20px 0px 40px;
+}
+
+.kontak-content .btn-box {
+    width: 150px;
+    height: 50px;
+}
+
+footer {
+    background: var(--sekunder);
+    color: #868c96;
+}
+
+footer p {
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer img {
+    width: 44px;
+}
